@@ -1,0 +1,32 @@
+{
+  "title": "User",
+  "description": "<p>User is app</p>",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "description": "<p>Entity ID, using uuid</p>",
+      "type": "string",
+      "items": []
+    },
+    "userName": {
+      "title": "User Name",
+      "description": "<p>User name, unique as per user</p><p>Cannot be changed once created</p><p>Minimum 6 characters</p><p>Only accept alphanumeric characters</p>",
+      "type": "string",
+      "items": [],
+      "minLength": 6,
+      "maxLength": 30,
+      "pattern": "\\w"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string",
+      "items": []
+    }
+  },
+  "required": [
+    "id",
+    "userName"
+  ],
+  "items": []
+}
