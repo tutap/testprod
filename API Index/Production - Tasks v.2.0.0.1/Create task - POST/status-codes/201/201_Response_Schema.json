@@ -1,0 +1,44 @@
+{
+  "title": "Task",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "description": "<p>Entity ID, using uuid</p>",
+      "type": "string",
+      "items": []
+    },
+    "taskName": {
+      "title": "Task Name",
+      "description": "<p>Name of the task</p>",
+      "type": "string",
+      "items": [],
+      "minLength": 1
+    },
+    "description": {
+      "title": "Description",
+      "description": "<p><strong>Optional. </strong>Description of the task</p>",
+      "type": "string",
+      "items": []
+    },
+    "priority": {
+      "title": "Priority",
+      "description": "<p>Priority of the task:</p><ul><li>Urgent</li><li>High</li><li>Normal</li><li>Low</li></ul>",
+      "type": "string",
+      "default": "Normal",
+      "items": [],
+      "enum": [
+        "Urgent",
+        "High",
+        "Normal",
+        "Low"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "taskName",
+    "priority"
+  ],
+  "items": []
+}
